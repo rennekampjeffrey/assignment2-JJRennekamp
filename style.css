@@ -100,3 +100,16 @@ footer {
     padding: 15px 0;
     font-size: 14px;
 }
+
+/* Logo Layout */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 80px;   /* adjust if needed */
+    height: auto;
+}
