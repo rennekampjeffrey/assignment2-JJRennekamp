@@ -1,41 +1,40 @@
 /* =====================================================
-   GENERAL BODY STYLING
-   Sets font, line height, and background color
+   GENERAL BODY STYLING (Playful Theme)
 ===================================================== */
 
 body {
     margin: 0;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Comic Sans MS", cursive;
     line-height: 1.6;
-    background-color: #f4f6f9;
+    background-color: #fff8dc; /* light warm yellow */
     color: #333;
-   font-size: 18px;
 }
 
 
 /* =====================================================
-   STICKY HEADER WITH SHADOW
+   STICKY HEADER
 ===================================================== */
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #1a2b4c;
+    background-color: #ff6b6b; /* playful coral */
     color: white;
     text-align: center;
     padding: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
 header h1 {
     margin: 0;
+    font-size: 28px;
 }
 
 
 /* =====================================================
-   NAVIGATION MENU STYLING
+   NAVIGATION MENU
 ===================================================== */
 
 nav {
@@ -45,14 +44,16 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 20px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 18px;
+    transition: all 0.3s ease;
 }
 
-/* Hover Effect */
+/* Fun hover effect */
 nav a:hover {
-    color: #ffd700;
+    color: #ffe66d;
+    transform: scale(1.2);
 }
 
 
@@ -64,27 +65,38 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    padding-top: 150px; /* prevents header overlap */
+    min-height: 85vh;
+    padding-top: 160px; /* prevent overlap with header */
 }
 
 .content {
     max-width: 700px;
     text-align: center;
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 
 /* =====================================================
-   FOOTER (MATCHES HEADER COLOR)
+   IMAGE STYLING
+===================================================== */
+
+img {
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   FOOTER
 ===================================================== */
 
 footer {
-    background-color: #1a2b4c;
+    background-color: #ff6b6b;
     color: white;
     text-align: center;
     padding: 15px 0;
+    font-size: 14px;
 }
