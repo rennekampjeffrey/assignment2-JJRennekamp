@@ -1,60 +1,51 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* =========================
-     THEME TOGGLE
-  ========================== */
-  const themeBtn = document.getElementById("theme-toggle");
-
-  themeBtn.addEventListener("click", function () {
+  /* THEME */
+  document.getElementById("theme-toggle").addEventListener("click", () => {
     document.body.classList.toggle("dark");
   });
 
-  /* =========================
-     FAQ ACCORDION
-  ========================== */
-  const questions = document.querySelectorAll(".faq-question");
+  /* NAV */
+  document.getElementById("menu-btn").addEventListener("click", () => {
+    document.getElementById("nav-links").classList.toggle("show");
+  });
 
-  questions.forEach(function (q) {
+  /* FAQ */
+  document.querySelectorAll(".faq-question").forEach(q => {
     q.addEventListener("click", function () {
-
       const answer = this.nextElementSibling;
-
-      if (answer.style.display === "block") {
-        answer.style.display = "none";
-      } else {
-        answer.style.display = "block";
-      }
-
+      answer.classList.toggle("open");
     });
   });
 
-  /* =========================
-     FORM VALIDATION
-  ========================== */
-  const form = document.getElementById("contact-form");
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
+  /* FORM */
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
-    const message = document.getElementById("form-message");
+    const msg = document.getElementById("form-message");
 
     if (name === "" || email === "") {
-      message.textContent = "Please fill out all fields.";
+      msg.textContent = "Please fill out all fields.";
     } else {
-      message.textContent = "Form submitted successfully!";
+      msg.textContent = "Message sent successfully!";
     }
   });
 
-  /* =========================
-     NAV MENU TOGGLE
-  ========================== */
-  const menuBtn = document.getElementById("menu-btn");
-  const navLinks = document.getElementById("nav-links");
+  /* CALCULATOR */
+  document.getElementById("calc-btn").addEventListener("click", function () {
+    const P = parseFloat(document.getElementById("initial").value);
+    const r = parseFloat(document.getElementById("rate").value) / 100;
+    const t = parseFloat(document.getElementById("years").value);
 
-  menuBtn.addEventListener("click", function () {
-    navLinks.classList.toggle("show");
+    if (isNaN(P) || isNaN(r) || isNaN(t)) {
+      document.getElementById("result").textContent = "Enter valid numbers.";
+      return;
+    }
+
+    const FV = P * Math.pow((1 + r), t);
+    document.getElementById("result").textContent =
+      "Future Value: $" + FV.toFixed(2);
   });
 
 });
