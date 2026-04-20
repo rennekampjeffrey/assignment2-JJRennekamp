@@ -9,15 +9,23 @@
 <body>
 
   <!-- NAV -->
-  <header>
-    <h1>Rennekamp Wealth Management</h1>
-  </header>
+  <nav class="navbar">
+    <h1>Rennekamp WM</h1>
+    <button id="menu-btn">☰</button>
+    <ul id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- THEME BUTTON -->
+  <button id="theme-toggle">Toggle Dark Mode</button>
 
   <!-- HERO -->
   <section class="hero">
     <h2>Building Your Financial Future</h2>
-    <p>Helping individuals and families grow and protect their wealth.</p>
-    <button>Schedule a Consultation</button>
+    <p>Helping individuals grow and protect their wealth.</p>
   </section>
 
   <!-- SERVICES -->
@@ -30,31 +38,28 @@
     </ul>
   </section>
 
-  <!-- FAQ SECTION -->
+  <!-- FAQ -->
   <section class="faq">
-    <h2>Frequently Asked Questions</h2>
+    <h2>FAQ</h2>
 
-    <div class="faq-item">
-      <button class="faq-question">What services do you offer?</button>
-      <p class="faq-answer">We offer financial planning, retirement strategies, and investment management.</p>
-    </div>
+    <button class="faq-question">What services do you offer?</button>
+    <p class="faq-answer">Financial planning and investment management.</p>
 
-    <div class="faq-item">
-      <button class="faq-question">Who do you work with?</button>
-      <p class="faq-answer">We work with individuals, families, and small business owners.</p>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">How do I get started?</button>
-      <p class="faq-answer">Contact us to schedule an initial consultation.</p>
-    </div>
+    <button class="faq-question">Who do you work with?</button>
+    <p class="faq-answer">Individuals and families.</p>
 
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Rennekamp Wealth Management</p>
-  </footer>
+  <!-- CONTACT FORM -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Name">
+      <input type="email" id="email" placeholder="Email">
+      <button type="submit">Submit</button>
+      <p id="form-message"></p>
+    </form>
+  </section>
 
   <script src="script.js"></script>
 
