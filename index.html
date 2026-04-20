@@ -8,61 +8,71 @@
 
 <body>
 
-  <!-- NAV -->
-  <nav class="navbar">
-    <h1>Rennekamp WM</h1>
-    <button id="menu-btn">☰</button>
-    <ul id="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+<!-- NAV -->
+<nav class="navbar">
+  <h1>Rennekamp WM</h1>
+  <button id="menu-btn">☰</button>
+  <ul id="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#calculator">Calculator</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- THEME BUTTON -->
-  <button id="theme-toggle">Toggle Dark Mode</button>
+<button id="theme-toggle">🌙 Dark Mode</button>
 
-  <!-- HERO -->
-  <section class="hero">
+<!-- HERO -->
+<section class="hero">
   <h2>Helping You Build and Protect Wealth</h2>
-  <p>Personalized financial strategies for long-term success.</p>
+  <p>Personalized financial strategies designed for long-term success.</p>
   <button>Schedule a Consultation</button>
 </section>
 
-  <!-- SERVICES -->
-  <section class="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Financial Planning</li>
-      <li>Retirement Planning</li>
-      <li>Investment Management</li>
-    </ul>
-  </section>
+<!-- SERVICES -->
+<section id="services" class="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">Financial Planning</div>
+    <div class="card">Retirement Planning</div>
+    <div class="card">Investment Management</div>
+  </div>
+</section>
 
-  <!-- FAQ -->
-  <section class="faq">
-    <h2>FAQ</h2>
+<!-- CALCULATOR -->
+<section id="calculator" class="calculator">
+  <h2>Investment Growth Calculator</h2>
+  <input type="number" id="initial" placeholder="Initial Investment">
+  <input type="number" id="rate" placeholder="Annual Interest Rate (%)">
+  <input type="number" id="years" placeholder="Years">
+  <button id="calc-btn">Calculate</button>
+  <p id="result"></p>
+</section>
 
-    <button class="faq-question">What services do you offer?</button>
-    <p class="faq-answer">Financial planning and investment management.</p>
+<!-- FAQ -->
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
 
-    <button class="faq-question">Who do you work with?</button>
-    <p class="faq-answer">Individuals and families.</p>
+  <button class="faq-question">What services do you offer?</button>
+  <div class="faq-answer">We provide financial planning, retirement strategies, and portfolio management.</div>
 
-  </section>
+  <button class="faq-question">Who do you work with?</button>
+  <div class="faq-answer">Individuals, families, and small businesses.</div>
 
-  <!-- CONTACT FORM -->
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <input type="text" id="name" placeholder="Name">
-      <input type="email" id="email" placeholder="Email">
-      <button type="submit">Submit</button>
-      <p id="form-message"></p>
-    </form>
-  </section>
+</section>
 
-  <script src="script.js"></script>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <form id="contact-form">
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <button type="submit">Submit</button>
+    <p id="form-message"></p>
+  </form>
+</section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
