@@ -1,68 +1,56 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   margin: 0;
-  background-color: #f5f5f5;
 }
 
-/* HEADER */
-header {
-  background-color: #0A2540;
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #0A2540;
   color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 15px;
 }
 
-/* HERO */
-.hero {
-  padding: 40px;
-  text-align: center;
-  background-color: white;
+#nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
 
-.hero button {
-  padding: 10px 20px;
-  background-color: #C9A961;
-  border: none;
-  cursor: pointer;
+#menu-btn {
+  display: none;
 }
 
-/* SERVICES */
-.services {
-  padding: 30px;
-  background-color: #eaeaea;
+/* MOBILE */
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+
+  #menu-btn {
+    display: block;
+  }
+}
+
+/* DARK MODE */
+.dark {
+  background-color: #111;
+  color: white;
 }
 
 /* FAQ */
-.faq {
-  padding: 30px;
-  background-color: white;
-}
-
-.faq-question {
-  width: 100%;
-  padding: 12px;
-  text-align: left;
-  background-color: #0A2540;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
-.faq-question.active {
-  background-color: #C9A961;
-}
-
 .faq-answer {
   display: none;
-  padding: 10px;
-  background-color: #f9f9f9;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #0A2540;
-  color: white;
+/* FORM */
+input {
+  display: block;
+  margin: 10px 0;
 }
